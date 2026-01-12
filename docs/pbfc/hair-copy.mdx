@@ -1,0 +1,84 @@
+---
+title: Hairのコピー方法
+---
+
+### 1) ツールを起動する
+
+![](/images/hair-copy/Animation1.gif)
+
+
+Unity 上部メニューから、
+PRP System → Phys Bone Full Copier → Avatar Phys Bone Copier の順に選択し、ツールを開いてください。
+
+---
+
+
+### 2) コピー元・コピー先を設定する
+
+![](/images/hair-copy/Animation8.gif)
+
+- オリジナル Prefab
+
+  コピー元となる、すでに設定済みの Prefab を指定します。
+
+- 修正済み FBX
+
+  設定を移行したい、修正後の FBX を指定します。
+
+⭐ 本ツールは、**同一のボーン構造（同一衣装）間でのみ**コピーが可能です。
+
+
+本マニュアルでは、説明用の例として  
+オリジナル Prefab に Shinra 用Hair Prefab（すでに設定済みの Prefab）、  
+修正済み FBX に Shinra 用Hair Prefabを使用します。
+
+
+---
+
+### 3) ポップアップについて
+
+![](/images/hair-copy/Animation9.gif)
+
+ボーン構造に差分がある場合、  
+構造差分を確認するためのポップアップが表示されることがあります。
+
+
+これはエラーではなく、  
+構造差分を検知した際に表示される通常の確認画面です。
+
+内容を確認したうえで、  
+「Yes」 を選択してください。
+
+---
+
+### 4) コピーを実行する 
+
+![](/images/hair-copy/Animation10.gif)
+
+表示されるポップアップはエラーではありませんので、  
+そのまま「OK」を押してください。
+
+このメッセージは、Original Prefab 内の PhysBone の Root Transform が  
+コピー先のボーンと未接続の場合に表示され、  
+同名のボーンに対して PhysBone が自動的に追加されることを意味します。
+
+
+---
+
+### 5) マテリアルのみをコピーしたい場合
+
+すでに物理設定のコピーが完了しており、  
+マテリアルのみをコピーしたい場合は、  
+「全体コピー」ではなく、Material Only タブを使用してください。
+
+Material Only タブで、  
+マテリアル Prefab に  
+既存のカラー設定済み Prefab を指定することで、  
+マテリアルのみを個別にコピーできます。
+
+![](/images/hair-copy/Animation11.gif)
+
+※ なお、こちらについても  
+メッシュ名が一致していることが前提条件となります。
+
+---

@@ -1,0 +1,196 @@
+﻿/**
+ * Any CSS included here will be global.
+ * Infima default styles override
+ */
+
+/* =========================
+   Infima 기본 컬러
+   ========================= */
+:root {
+    --ifm-color-primary: #2e8555;
+    --ifm-color-primary-dark: #29784c;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #33925d;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    /* ✅ Right TOC(오른쪽 목차) 변수 오버라이드 */
+    --ifm-toc-font-size: 0.85rem;
+    --ifm-toc-link-color: #222;
+    --ifm-toc-link-color-active: #111;
+    --ifm-toc-link-color-hover: #111;
+}
+
+/* 다크 모드 */
+[data-theme='dark'] {
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    /* ✅ Right TOC(오른쪽 목차) 다크모드 */
+    --ifm-toc-link-color: #e6e6e6;
+    --ifm-toc-link-color-active: #ffffff;
+    --ifm-toc-link-color-hover: #ffffff;
+}
+
+/* =========================
+   Recommend Pink Box
+   ========================= */
+.recommendPinkBox {
+    background-color: #fff0f3;
+    border-left: 4px solid #ff8fa3;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 20px 0;
+}
+
+    .recommendPinkBox p {
+        margin: 0 0 8px 0;
+        font-weight: 600;
+    }
+
+    .recommendPinkBox ul {
+        margin: 0;
+    }
+
+/* =========================
+   Updates page (updates.mdx)
+   ========================= */
+.updatesPage .updateVersion {
+    color: #ff7a00;
+    font-weight: 800;
+}
+
+.updatesPage .updateDate {
+    color: #ffb36a;
+    font-weight: 650;
+}
+
+/* "### ■ ..." 같은 제목 색 (h3) */
+.updatesPage h3 {
+    color: #ff7a00;
+}
+
+/* NEW 배지 (파랑) */
+.updatesPage .badgeNew {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.78em;
+    font-weight: 800;
+    line-height: 1.25;
+    background: #3b82f6;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+/* 제목 옆 # 앵커 숨기기 */
+h2 .hash-link,
+h3 .hash-link,
+h4 .hash-link {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+/* =========================
+   Highlight Text Styles
+   (중복 정의 제거한 "최종본")
+   ========================= */
+.bigText {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #ff8fa3;
+    margin-bottom: 8px;
+}
+
+/* 기본 파랑 */
+.highlightBlue {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #4da3ff;
+    margin-bottom: 8px;
+}
+
+/* 더 짙은 파랑 */
+.highlightBlueDeep {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #1f6fe5;
+    margin-bottom: 8px;
+}
+
+/* 와인레드 */
+.highlightWineRed {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #8b1e3f;
+    margin-bottom: 8px;
+}
+
+/* 밝은 레드 */
+.highlightSoftRed {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #c7364a;
+    margin-bottom: 8px;
+}
+
+/* 핑크 섹션 타이틀 */
+.pinkSectionTitle {
+    color: #ff5f8a;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 28px 0 10px 0;
+}
+
+/* =========================
+   Blue info box (원하는 파란 박스)
+   ========================= */
+.infoBlueBox {
+    background-color: #eef5ff;
+    border-left: 4px solid #4c7dff;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+    .infoBlueBox strong {
+        color: #2f5fd0;
+    }
+
+/* =========================
+   ✅ Right TOC 강제 적용 (안 먹을 때 대비)
+   ========================= */
+.theme-doc-toc-desktop,
+.theme-doc-toc-desktop .table-of-contents,
+.theme-doc-toc-desktop .table-of-contents li,
+.theme-doc-toc-desktop .table-of-contents a {
+    font-size: 0.85rem !important;
+    color: #222 !important;
+}
+
+[data-theme='dark'] .theme-doc-toc-desktop,
+[data-theme='dark'] .theme-doc-toc-desktop .table-of-contents,
+[data-theme='dark'] .theme-doc-toc-desktop .table-of-contents li,
+[data-theme='dark'] .theme-doc-toc-desktop .table-of-contents a {
+    color: #e6e6e6 !important;
+}
+.qTitle {
+    color: #4742DB
+}
+.q2Title {
+    color: #0042ED
+}

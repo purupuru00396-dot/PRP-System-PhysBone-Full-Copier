@@ -1,0 +1,213 @@
+---
+
+title: 更新内容
+
+---
+
+<div className="updatesPage">
+
+最新バージョンから順に記載しています。  
+
+重要な仕様変更が含まれる場合は、各バージョン内に補足説明を記載しています。
+
+
+
+---
+
+
+
+<div className="updateCard">
+
+## <span className="updateVersion">v1.1.5</span>（<span className="updateDate">2026/01/01</span>）
+
+
+### ■ コンポーネントコピー機能の追加 <span className="badgeNew">NEW</span>
+
+
+従来の PhysBone / Collider に加え、  Animator や Modular Avatar 関連コンポーネントも  まとめてコピーできるようになりました。
+
+コピー対象はフィルター（チェックボックス）で選択可能です。
+
+<span style={{ display: "block", height: "30px" }}></span>
+
+※ メッシュ系 Modular Avatar コンポーネント  
+
+（例：MA Shape Changer）は、環境によって挙動が崩れる可能性があるため、  オプション扱い（初期設定 OFF）としています。
+
+
+
+---
+
+
+
+### ■ Modular Avatar 互換性の強化 <span className="badgeNew">NEW</span>  
+
+（トグル／衣装切り替え + Shape Changer 自動マッチング）
+
+<span style={{ display: "block", height: "30px" }}></span>
+
+
+- アバターのルート名やオブジェクト名が異なっていても、  
+
+&nbsp; Merge Animator（トグル／衣装切り替え）のアニメーションパスを  
+
+&nbsp; 自動で調整し、動作しやすくなるよう改善しました。
+
+
+<span style={{ display: "block", height: "30px" }}></span>
+
+- MA Shape Changer 使用時、  &nbsp; 衣装側アバターが別であっても、  &nbsp; 内部のボーン構造やオブジェクト構成が同一であれば、  
+
+&nbsp; 自動で接続先を検出してマッチングします。
+
+
+
+これにより、手動での再接続作業を大幅に削減できます。
+
+
+
+---
+
+
+
+### ■ マッチングロジックの改善 <span className="badgeNew">NEW</span>
+
+
+
+以下のような軽微な差分があっても、  
+
+可能な範囲で近い対象を自動検出してマッチングするよう改善しました。
+
+
+
+\- 空白 / `\_` / `-`
+
+\- `.1` / `(Clone)` などのサフィックス違い
+
+
+
+---
+
+
+
+### ■ Copy Failure Inspector の改善 <span className="badgeNew">NEW</span>
+
+
+
+従来の Structure Diagnostic Window を刷新し、  単純な比較ではなく、失敗原因をカテゴリ別に表示します。
+
+
+
+\- ボーン名の不一致（例：`.001`）
+
+\- 重複ボーン
+
+\- 階層（パス）の違い
+
+\- 対象オブジェクトの欠落
+
+
+
+また、診断結果をテキストとしてコピー可能なレポート形式に整理しました。
+
+
+
+---
+
+
+
+### ■ ログ保存・リセット挙動の改善 <span className="badgeNew">NEW</span>
+
+
+
+- 作業ログが自動でファイルに保存されます  
+
+&nbsp; （例：  &nbsp; `Assets/! PRP System !/Phys Bone Full Copier/Logs/PhysBoneCopyLog.txt`）
+
+
+
+- Reset 実行時、  
+
+&nbsp; 今回のバージョンでコピーされたコンポーネントも含めて&nbsp; まとめて初期化されるよう調整しました。
+
+
+
+</div>
+
+
+
+---
+
+
+
+## <span className="updateVersion">v1.1.4</span>（<span className="updateDate">2025/09/18</span>）
+
+
+
+### ■ Constraint コピー挙動の修正
+
+
+
+変更前（Before）
+
+修正 FBX に貼り付けた際、  Constraint の参照先に元プレハブのボーンが含まれていました。
+
+
+<span style={{ display: "block", height: "5px" }}></span>
+
+
+変更後（After）
+<span style={{ display: "block", height: "1px" }}></span>
+コピー後は、新しい FBX 側の同名ボーンのみを参照するよう修正しました。
+
+
+
+---
+
+
+
+## <span className="updateVersion">v1.1.3</span>（<span className="updateDate">2025/06/02</span>）
+
+
+
+\- 「Tool Info」スクリプトを Editor フォルダに移動  
+
+\- Editor 拡張がビルド時にエラーを出さないよう修正
+
+
+
+---
+
+
+
+## <span className="updateVersion">v1.1.2</span>（<span className="updateDate">2025/05/21</span>）
+
+
+
+\- メニュー構成を  
+
+&nbsp; `PRP System > Phys Bone Full Copier` に変更
+
+
+
+\- Constraint（Parent / Position / Rotation / Scale）のコピーに対応  
+
+&nbsp; ※ オプションチェックボックスで有効化可能
+
+
+
+---
+
+
+
+## <span className="updateVersion">v1.1.1</span>（<span className="updateDate">2025/05/01</span>）
+
+
+
+\- 「Copy PhysBones \& Colliders」ボタンの UI カラーを変更  
+
+\- 「Reset Copied Items」実行時、  
+
+&nbsp; 既存ログテキストも同時にリセットされるよう改善
+
+</div>

@@ -1,0 +1,288 @@
+---
+
+title: ツールのメリット
+
+---
+
+
+<div className="recommendPinkBox">
+
+  <strong>⭐ このような方におすすめです</strong><br />
+
+  ・FBX 修正後の物理再設定が負担に感じている方<br />
+
+  ・衣装バリエーションが多く、繰り返し作業が多い方<br />
+
+  ・Animator / Toggle 設定を頻繁に再利用する方<br />
+
+  ・Modular Avatar 環境で衣装制作を行っている方
+
+</div>
+
+
+---
+
+<span class="highlightBlueDeep">
+
+📌 PhysBone Full Copier が変える制作フロー
+
+</span>
+
+
+
+PhysBone Full Copier は、  設定をコピーするだけのツールではありません。
+
+<span style={{ display: "block", height: "20px" }}></span>
+
+
+一度作成した PhysBone や Animator の設定を、  
+
+FBX を修正した後もそのまま再利用できるようにすることで、  衣装制作の作業フローそのものを効率化します。
+
+
+
+---
+
+
+
+<span class="highlightBlueDeep">
+
+■ FBX 修正後の再設定作業をほぼゼロにー
+
+</span>
+
+
+
+衣装制作において、FBX の修正作業は避けて通れません。  
+
+ボーン位置の調整、メッシュ修正、ウェイトの微調整など、  わずかな変更であっても、Unity 上では次のような問題が発生しがちです。
+
+
+
+- PhysBone が外れてしまう  
+
+- Collider を一から設定し直す必要がある  
+
+- 「前と同じ設定のはずなのに挙動が違う」と感じる  
+
+
+
+PhysBone Full Copier を使用することで、  FBX 修正後でも既存の PhysBone / Collider 設定をそのまま再適用できます。
+<span style={{ display: "block", height: "20px" }}></span>
+
+
+その結果、
+
+- 設定を最初から作り直す必要がなく  
+
+- これまで調整してきた数値をそのまま再利用でき  
+
+- FBX 修正に対する心理的な負担が大幅に軽減されます  
+
+
+
+---
+
+
+
+<span class="highlightBlueDeep">
+
+■ 作業フローはどう変わるのか？
+
+</span>
+
+
+
+<span class="pinkSectionTitle">
+
+従来の制作フロー
+
+</span>
+
+
+
+1\. FBX を修正  
+
+2\. Unity に再インポート  
+
+3\. PhysBone / Collider を再設定  
+
+4\. 挙動確認・再調整  
+
+
+
+この工程を、衣装修正のたびに繰り返す必要がありました。
+
+<span style={{ display: "block", height: "30px" }}></span>
+
+
+
+
+<span class="pinkSectionTitle">
+
+PhysBone Full Copier 使用時
+
+</span>
+
+
+
+
+1\. FBX を修正  
+
+2\. Unity に再インポート  
+
+3\. 既存設定をコピーして適用  
+
+4\. 最小限の確認のみ  
+
+<span style={{ display: "block", height: "30px" }}></span>
+
+
+「設定を作る作業」から「確認する作業」へ制作の重心が大きく変わります。
+
+
+---
+
+
+<span class="highlightBlueDeep">
+
+■ ボーン名や構造差分を吸収する Cross-Avatar 対応
+
+</span>
+
+
+
+同じ衣装であっても、  
+FBX 修正や制作環境の違いによって  ボーン名や階層構造が完全に一致しないケースは少なくありません。
+
+<span style={{ display: "block", height: "20px" }}></span>
+
+
+たとえば、
+
+- `LowerArm_L` と `LowerArm.L` のような表記差  
+
+- 記号・区切り文字の違い  
+
+- 構造は同じだが命名規則だけが異なる場合  
+
+
+<span style={{ display: "block", height: "20px" }}></span>
+
+
+PhysBone Full Copier は、  ボーン名の完全一致だけに依存せず、  
+階層構造や親子関係を総合的に判断し、  意味的に同一と判断できるボーンを自動で対応付けます。
+
+<span style={{ display: "block", height: "20px" }}></span>
+
+これにより、
+- 同一衣装をベースにした FBX 修正  
+- ボーン命名ルールが微妙に変わった場合  
+
+
+<span style={{ display: "block", height: "20px" }}></span>
+でも、  既存の設定を最大限再利用することが可能になります。
+
+---
+
+<span class="highlightBlueDeep">
+
+■ Animator / Toggle 設定をそのまま保持
+
+</span>
+
+
+
+
+衣装制作で特に手間がかかる作業のひとつが、  ON / OFF トグル（Animator）の再構築です。
+
+
+
+PhysBone Full Copier は、  物理設定だけでなく、  衣装トグルに使用されている Animator 設定もまとめてコピーできます。
+
+<span style={{ display: "block", height: "20px" }}></span>
+
+
+そのため、
+
+-  既存の ON / OFF トグルを作り直す必要がなく  
+
+- メニュー構成やパラメータ設定をそのまま維持でき  
+
+- 複数の衣装バリエーションを素早く展開できます  
+
+
+
+---
+
+
+<span class="highlightBlueDeep">
+
+■ Modular Avatar 環境に最適化された設計
+
+</span>
+
+
+PhysBone Full Copier は、  Modular Avatar を使用した衣装制作フローを前提に設計されています。
+
+
+
+PhysBone / Collider に加え、  衣装制作に必要な各種 Modular Avatar コンポーネントを  まとめてコピー・移行することが可能です。
+
+
+
+その結果、
+- 物理設定  
+- アニメーション設定  
+- メニューおよびパラメータ構成  
+
+
+
+を個別に移す必要がなく、  衣装制作に必要な構成一式をそのまま再利用できます。
+
+
+
+---
+
+
+<span class="highlightBlueDeep">
+
+■ 作業ミスを防ぐための安全設計
+
+</span>
+
+
+PhysBone Full Copier は、  無条件にコピー処理を実行するツールではありません。
+
+
+
+構造差分がある場合や、  
+自動対応が危険だと判断されるケースでは、  Copy Failure Inspector によって差分を明確に表示します。
+
+<span style={{ display: "block", height: "20px" }}></span>
+
+
+これにより、
+- 自動対応された箇所  
+- 手動確認が必要な箇所  
+
+を理解した上で、  安全に作業を進めることができます。
+
+
+
+---
+
+<span class="highlightBlueDeep">
+
+■ 一文でまとめると
+
+</span>
+
+
+PhysBone Full Copier は、  「一度きちんと作った設定を、二度と作り直さなくて済むようにするツール」です。
+
+
+
+
+
+
