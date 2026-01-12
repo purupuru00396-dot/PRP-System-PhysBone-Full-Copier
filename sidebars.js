@@ -7,7 +7,7 @@ const sidebars = {
             collapsible: true,
             collapsed: false,
             items: [
-                'pbfc/tool-intro',
+                'pbfc/intro',
                 'pbfc/merits',
                 'pbfc/updates',
                 'pbfc/getting-started',
