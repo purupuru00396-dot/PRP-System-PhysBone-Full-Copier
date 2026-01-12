@@ -1,51 +1,40 @@
-﻿const sidebars = {
+﻿/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
     tutorialSidebar: [
         {
-            type: "category",
-            label: "PhysBone Full Copier Manual",
+            type: 'category',
+            label: 'PhysBone Full Copier Manual',
+            collapsible: true,
             collapsed: false,
             items: [
-                "pbfc/intro",
-                "pbfc/merits",
-                "pbfc/updates",
-                "pbfc/getting-started",
-                "pbfc/hair-copy",
+                'pbfc/tool-intro',
+                'pbfc/merits',
+                'pbfc/updates',
+                'pbfc/getting-started',
+                'pbfc/hair-copy',
+                {
+                    type: 'category',
+                    label: 'サポート情報',
+                    items: [
+                        'pbfc/faq',
+                        'pbfc/license',
+                        'pbfc/environment',
+                    ],
+                },
             ],
         },
 
         {
-            type: "category",
-            label: "サポート情報",
+            type: 'category',
+            label: 'Copy Failure Inspector Tools Manual',
+            collapsible: true,
             collapsed: false,
             items: [
-                "pbfc/faq",
-                "pbfc/license",
-                "pbfc/environment",
-            ],
-        },
-
-        {
-            type: "category",
-            label: "Copy Failure Inspector Tools Manual",
-            collapsed: false,
-            items: [
-                "cfi/merits",
-                "cfi/getting-started",
+                'cfi/merits',
+                'cfi/getting-started',
             ],
         },
     ],
 };
-
-{
-    type: 'doc',
-        id: 'pbfc/getting-started',
-            label: 'ツールの始め方',
-},
-{
-    type: 'doc',
-        id: 'cfi/getting-started',
-            label: 'ツールの始め方',
-},
-
 
 module.exports = sidebars;
