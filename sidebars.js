@@ -1,9 +1,6 @@
 ﻿/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
     tutorialSidebar: [
-        // =========================
-        // PhysBone Full Copier
-        // =========================
         {
             type: 'category',
             label: 'PhysBone Full Copier Manual',
@@ -18,12 +15,10 @@ const sidebars = {
             ],
         },
 
-        // =========================
-        // Support
-        // =========================
         {
             type: 'category',
             label: 'サポート情報',
+            collapsible: true,
             collapsed: false,
             items: [
                 'support/faq',
@@ -32,9 +27,6 @@ const sidebars = {
             ],
         },
 
-        // =========================
-        // Copy Failure Inspector
-        // =========================
         {
             type: 'category',
             label: 'Copy Failure Inspector Tools Manual',

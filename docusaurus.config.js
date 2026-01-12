@@ -52,10 +52,14 @@ const config = {
     themeConfig: {
         navbar: {
             title: 'PURUPURU Tools Manual',
+            logo: {
+                alt: 'PURUPURU',
+                src: 'img/logo.png', // <- static/img/logo.png 여기에 파일 있어야 함
+            },
             items: [
                 { to: '/', label: 'Tutorial', position: 'left' },
                 {
-                    href: 'https://pururu.booth.pm/items/6843070', // 너 부스 링크로 바꿔도 됨
+                    href: 'https://pururu.booth.pm/items/6843070',
                     label: 'BOOTH',
                     position: 'right',
                 },
@@ -73,6 +77,6 @@ const config = {
             darkTheme: prismThemes.dracula,
         },
     },
-};
+
 
 export default config;
