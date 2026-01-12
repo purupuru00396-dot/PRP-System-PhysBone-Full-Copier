@@ -36,4 +36,16 @@
     ],
 };
 
+{
+    type: 'doc',
+        id: 'pbfc/getting-started',
+            label: 'ツールの始め方',
+},
+{
+    type: 'doc',
+        id: 'cfi/getting-started',
+            label: 'ツールの始め方',
+},
+
+
 module.exports = sidebars;

@@ -1,9 +1,7 @@
 ---
-
 title: ツールの始め方
-
+slug: /cfi/getting-started
 ---
-
 
 
 ## 🔍 Copy Failure Inspector Tools の使い方
