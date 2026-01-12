@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
 
@@ -10,7 +12,7 @@ const config = {
     future: { v4: true },
 
     url: 'https://purupuru00396-dot.github.io',
-    baseUrl: '/PRP-System-PhysBone-Full-Copier/',
+    baseUrl: isProd ? '/PRP-System-PhysBone-Full-Copier/' : '/',
 
 
     organizationName: 'purupuru00396-dot',
