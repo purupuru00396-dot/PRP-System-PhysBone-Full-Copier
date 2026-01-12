@@ -1,7 +1,11 @@
-// docusaurus.config.js
-// @ts-check
 
 import { themes as prismThemes } from 'prism-react-renderer';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const isProd = process.env.NODE_ENV === 'production';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -9,88 +13,68 @@ const config = {
     tagline: 'PhysBone Full Copier / Copy Failure Inspector',
     favicon: 'img/favicon.ico',
 
+    // ✅ GitHub Pages (project pages)
     url: 'https://purupuru00396-dot.github.io',
+    baseUrl: isProd ? '/PRP-System-PhysBone-Full-Copier/' : '/',
 
-    baseUrl: '/PRP-System-PhysBone-Full-Copier/',
-
- 
-    onBrokenLinks: 'warn',
+    onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
-  
     i18n: {
-        defaultLocale: 'ja',
-        locales: ['ja'],
+        defaultLocale: 'en',
+        locales: ['en'],
     },
 
     presets: [
         [
             'classic',
-            /** @type {import('@docusaurus/preset-classic').Options} */
-            ({
+            {
+                // ✅ Docs를 루트로 올리고, 첫 화면을 "pbfc/getting-started"로 지정
                 docs: {
-                    sidebarPath: './sidebars.js',
-
- 
-                    editUrl:
-                        'https://github.com/purupuru00396-dot/PRP-System-PhysBone-Full-Copier/edit/main/',
-
-
-                    showLastUpdateTime: true,
+                    routeBasePath: '/', // <-- 핵심: docs가 / 에서 열림
+                    homePageId: 'pbfc/getting-started', // <-- 핵심: 첫 화면 문서
+                    sidebarPath: path.join(__dirname, 'sidebars.js'),
+                    // editUrl 필요 없으면 지워도 됨
+                    // editUrl: 'https://github.com/purupuru00396-dot/PRP-System-PhysBone-Full-Copier/edit/main/',
                 },
 
-
+                // ✅ Blog 완전 OFF
                 blog: false,
 
                 theme: {
-                    customCss: './src/css/custom.css',
+                    customCss: path.join(__dirname, 'src/css/custom.css'),
                 },
-            }),
+            },
         ],
     ],
 
-    themeConfig:
-        /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-        ({
-            navbar: {
-                title: 'PURUPURU Tools Manual',
-          
-                // logo: { alt: 'PURUPURU', src: 'img/logo.png' },
+    themeConfig: {
+        navbar: {
+            title: 'PURUPURU Tools Manual',
+            items: [
+                // docs가 루트니까 그냥 to: '/' 로 두면 됨
+                { to: '/', label: 'Tutorial', position: 'left' },
 
-                items: [
-                
-                    { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Manual' },
+                // BOOTH 링크(원하는 URL로 교체)
+                {
+                    href: 'https://pururu.booth.pm/items/6843070',
+                    label: 'BOOTH',
+                    position: 'right',
+                },
+            ],
+        },
 
-                  
-                    {
-                        href: 'https://pururu.booth.pm/items/6843070', 
-                        label: 'BOOTH',
-                        position: 'right',
-                    },
+        footer: {
+            style: 'dark',
+            links: [],
+            copyright: `Copyright © ${new Date().getFullYear()} PURUPURU. Built with Docusaurus.`,
+        },
 
-                   
-                    {
-                        href: 'https://discord.gg/qn76Vs83Sg', 
-                        label: 'Discord',
-                        position: 'right',
-                    },
-
-                
-                    { type: 'colorMode', position: 'right' },
-                ],
-            },
-
-            footer: {
-                style: 'dark',
-                links: [],
-                copyright: `Copyright © ${new Date().getFullYear()} PURUPURU. Built with Docusaurus.`,
-            },
-
-            prism: {
-                theme: prismThemes.github,
-                darkTheme: prismThemes.dracula,
-            },
-        }),
+        prism: {
+            theme: prismThemes.github,
+            darkTheme: prismThemes.dracula,
+        },
+    },
 };
 
 export default config;
