@@ -1,41 +1,40 @@
-# Website
+# PRP System Documentation
+PRP System is a collection of utility tools developed to simplify and
+stabilize complex setup processes in VRChat avatar creation.
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This documentation serves as the official manual for all PRP System tools.
 
-## Installation
 
-```bash
-yarn
-```
+## Included Tools
 
-## Local Development
 
-```bash
-yarn start
-```
+### PhysBone Full Copier
+A utility designed to streamline the transfer of PhysBone-related settings between compatible avatars.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+- Automatically copies PhysBone and Collider configurations  
+- Supports all major Unity Constraint components  
+- Optimized for VRChat avatar and clothing production workflows
 
-## Build
 
-```bash
-yarn build
-```
+### Copy Failure Inspector
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+A diagnostic tool for identifying structural issues before or after copy operations.
 
-## Deployment
+- Analyzes structural differences between Source and Target avatars  
+- Detects missing or renamed bones that may cause copy failures  
+- Helps creators resolve setup issues quickly and reliably
 
-Using SSH:
+## Download
 
-```bash
-USE_SSH=true yarn deploy
-```
+To obtain the latest version of the PRP System tools, please visit the
 
-Not using SSH:
+- **Download page:** [https://pururu.booth.pm/items/6843070]
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Support & Community
+
+If you encounter copy failures or unexpected tool behavior,
+or if you would like to report a bug, please join the Discord channel below:
+
+- **Support Discord:** [https://discord.gg/qn76Vs83Sg]
+
