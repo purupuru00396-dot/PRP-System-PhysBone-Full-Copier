@@ -12,7 +12,7 @@ const config = {
     future: { v4: true },
 
     url: 'https://purupuru00396-dot.github.io',
-    baseUrl: isProd ? '/PRP-System-PhysBone-Full-Copier/' : '/',
+    baseUrl: '/PRP-System-PhysBone-Full-Copier/',
 
 
     organizationName: 'purupuru00396-dot',
@@ -27,7 +27,7 @@ const config = {
             ({
                 docs: {
                     sidebarPath: './sidebars.js',
-                    // 필요 없으면 editUrl 줄 자체를 삭제해도 됨
+                    routeBasePath: '/',   // ✅ 이 줄 추가: 문서를 사이트 첫 화면으로
                     editUrl:
                         'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
