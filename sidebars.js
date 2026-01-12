@@ -24,12 +24,11 @@ const sidebars = {
         {
             type: 'category',
             label: 'サポート情報',
-            collapsible: true,
             collapsed: false,
             items: [
-                'pbfc/faq',
-                'pbfc/license',
-                'pbfc/environment',
+                'support/faq',
+                'support/license',
+                'support/environment',
             ],
         },
 
