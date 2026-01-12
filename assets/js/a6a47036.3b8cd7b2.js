@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkpbfc_docs=globalThis.webpackChunkpbfc_docs||[]).push([[539],{8490(t,c,s){s.r(c),s.d(c,{default:()=>u});s(6540);var a=s(6347),e=s(6025),r=s(4848);function u(){return(0,r.jsx)(a.rd,{to:(0,e.Ay)("/cfi/getting-started")})}}}]);
