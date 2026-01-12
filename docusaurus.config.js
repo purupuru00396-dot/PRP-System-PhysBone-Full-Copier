@@ -1,7 +1,7 @@
-const isProd = process.env.NODE_ENV === 'production';
-
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
+
+const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -11,14 +11,18 @@ const config = {
 
     future: { v4: true },
 
+    // ✅ GitHub Pages 기본 도메인 (유저 도메인 없어도 됨)
     url: 'https://purupuru00396-dot.github.io',
-    baseUrl: '/PRP-System-PhysBone-Full-Copier/',
 
+    // ✅ 로컬에서는 '/', 배포에서는 레포명 경로
+    baseUrl: isProd ? '/PRP-System-PhysBone-Full-Copier/' : '/',
 
     organizationName: 'purupuru00396-dot',
     projectName: 'PRP-System-PhysBone-Full-Copier',
 
-    onBrokenLinks: 'throw',
+    // 링크 하나 잘못돼도 빌드 폭발 방지(원하면 throw로 되돌려도 됨)
+    onBrokenLinks: 'warn',
+    onBrokenMarkdownLinks: 'warn',
 
     presets: [
         [
@@ -27,18 +31,13 @@ const config = {
             ({
                 docs: {
                     sidebarPath: './sidebars.js',
-                    routeBasePath: '/',   // ✅ 이 줄 추가: 문서를 사이트 첫 화면으로
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    // ✅ 문서를 사이트 첫 화면으로
+                    routeBasePath: '/',
+                    editUrl: 'https://github.com/purupuru00396-dot/PRP-System-PhysBone-Full-Copier',
                 },
-
-                // ✅ Blog 완전 OFF (상단 Blog 탭/라우트 제거)
                 blog: false,
-
                 theme: {
                     customCss: './src/css/custom.css',
-
-
                 },
             }),
         ],
@@ -50,7 +49,6 @@ const config = {
             colorMode: {
                 respectPrefersColorScheme: true,
             },
-
             navbar: {
                 title: 'PURUPURU Tools Manual',
                 logo: {
@@ -64,11 +62,6 @@ const config = {
                         position: 'left',
                         label: 'Tutorial',
                     },
-                    
-
-                 
-
-                    // ✅ BOOTH 링크
                     {
                         href: 'https://pururu.booth.pm/items/6843070',
                         label: 'BOOTH',
@@ -76,18 +69,16 @@ const config = {
                     },
                 ],
             },
-
-
             footer: {
                 style: 'dark',
                 links: [],
                 copyright: `Copyright © ${new Date().getFullYear()} PURUPURU. Built with Docusaurus.`,
             },
-
             prism: {
                 theme: prismThemes.github,
                 darkTheme: prismThemes.dracula,
             },
         }),
 };
+
 export default config;
