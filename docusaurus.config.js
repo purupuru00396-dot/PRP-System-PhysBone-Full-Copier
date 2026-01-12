@@ -9,11 +9,12 @@ const config = {
 
     future: { v4: true },
 
-    url: 'https://your-docusaurus-site.example.com',
-    baseUrl: '/',
+    url: 'https://purupuru00396-dot.github.io',
+    baseUrl: '/PRP-System-PhysBone-Full-Copier/',
 
-    organizationName: 'facebook',
-    projectName: 'docusaurus',
+
+    organizationName: 'purupuru00396-dot',
+    projectName: 'PRP-System-PhysBone-Full-Copier',
 
     onBrokenLinks: 'throw',
 
@@ -34,6 +35,8 @@ const config = {
 
                 theme: {
                     customCss: './src/css/custom.css',
+
+
                 },
             }),
         ],
@@ -85,5 +88,4 @@ const config = {
             },
         }),
 };
-
 export default config;
