@@ -1,10 +1,7 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const prismThemes = require('prism-react-renderer').themes;
+const path = require('path');
 
 const isProd = process.env.NODE_ENV === 'production';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,13 +9,11 @@ const config = {
     tagline: 'PhysBone Full Copier / Copy Failure Inspector',
     favicon: 'img/favicon.ico',
 
-    // GitHub Pages (project pages)
     url: 'https://purupuru00396-dot.github.io',
     baseUrl: isProd ? '/PRP-System-PhysBone-Full-Copier/' : '/',
 
     onBrokenLinks: 'throw',
 
-    // ✅ 최신 방식 (경고 메시지 뜨던 부분 해결)
     markdown: {
         hooks: {
             onBrokenMarkdownLinks: 'warn',
@@ -35,13 +30,10 @@ const config = {
             'classic',
             {
                 docs: {
-                    // ✅ docs를 사이트 루트(/)로 올림
                     routeBasePath: '/',
                     sidebarPath: path.join(__dirname, 'sidebars.js'),
                 },
-
                 blog: false,
-
                 theme: {
                     customCss: path.join(__dirname, 'src/css/custom.css'),
                 },
@@ -54,7 +46,7 @@ const config = {
             title: 'PURUPURU Tools Manual',
             logo: {
                 alt: 'PURUPURU',
-                src: 'img/logo.png', // <- static/img/logo.png 여기에 파일 있어야 함
+                src: 'img/logo.png',
             },
             items: [
                 { to: '/', label: 'Tutorial', position: 'left' },
@@ -77,6 +69,6 @@ const config = {
             darkTheme: prismThemes.dracula,
         },
     },
+};
 
-
-export default config;
+module.exports = config;
