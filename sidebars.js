@@ -1,6 +1,9 @@
 ﻿/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
     tutorialSidebar: [
+        // =========================
+        // PhysBone Full Copier
+        // =========================
         {
             type: 'category',
             label: 'PhysBone Full Copier Manual',
@@ -12,22 +15,36 @@ const sidebars = {
                 'pbfc/updates',
                 'pbfc/getting-started',
                 'pbfc/hair-copy',
-                {
-                    type: 'category',
-                    label: 'サポート情報',
-                    collapsible: true,
-                    collapsed: false,
-                    items: ['pbfc/faq', 'pbfc/license', 'pbfc/environment'],
-                },
             ],
-        }, 
+        },
 
+        // =========================
+        // Support
+        // =========================
+        {
+            type: 'category',
+            label: 'サポート情報',
+            collapsible: true,
+            collapsed: false,
+            items: [
+                'pbfc/faq',
+                'pbfc/license',
+                'pbfc/environment',
+            ],
+        },
+
+        // =========================
+        // Copy Failure Inspector
+        // =========================
         {
             type: 'category',
             label: 'Copy Failure Inspector Tools Manual',
             collapsible: true,
             collapsed: false,
-            items: ['cfi/merits', 'cfi/getting-started'],
+            items: [
+                'cfi/merits',
+                'cfi/getting-started',
+            ],
         },
     ],
 };
